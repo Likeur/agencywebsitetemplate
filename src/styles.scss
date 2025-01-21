@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: "Manrope", serif;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    z-index: 100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #e99f0d; /* gray-700 */
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #2d3748; /* gray-800 */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #020c15fb;
+    border-radius: 4px;
+    /* gray-100 */
+  }
+  

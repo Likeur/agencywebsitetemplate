@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class NavbarComponent {
-
+  public linkStyle = signal("hover:text-orange-600 duration-300")
 }

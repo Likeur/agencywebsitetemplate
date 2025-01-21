@@ -1,1 +1,17 @@
-<p>navbar works!</p>
+<nav class="flex relative z-40 items-center  justify-between w-[80vw] mx-auto">
+    <a href="" class="p-2 size-14 rounded-lg shadow-md grid place-content-center bg-white text-orange-600 font-semibold">
+        <span>AWT</span>
+    </a>
+
+    <ul class="flex items-center gap-4 lg:gap-10">
+        <li><a href=""  [class]="linkStyle()">Service</a></li>
+        <li><a href=""  [class]="linkStyle()">Pricing</a></li>
+        <li><a href=""  [class]="linkStyle()">Process</a></li>
+        <li><a href=""  [class]="linkStyle()">FAQs</a></li>
+       
+    </ul>
+
+    <a href="" class="p-3 hover:bg-orange-100 duration-300 hover:text-orange-600 px-12 rounded-full bg-orange-500">
+        <span>Reserver un appel</span>
+    </a>
+</nav>
