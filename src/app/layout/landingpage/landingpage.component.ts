@@ -34,6 +34,40 @@ export default class LandingpageComponent implements AfterViewInit {
       duration: 1,
       
     });
+
+    gsap.from('#ctaheadline1, #ctaheadline2', {
+      scrollTrigger: {
+        trigger: '#ctasection',
+        start: 'top 50%', 
+        end: 'bottom 50%',    
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y:50,
+      stagger:{
+        amount:0.2
+      },
+      ease:'power4.inOut',
+      duration: 1,
+      
+    });
+
+    gsap.from('.ctacircle', {
+      scrollTrigger: {
+        trigger: '#ctasection',
+        start: 'top 50%', 
+        end: 'bottom 50%',    
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      scale:0,
+      stagger:{
+        amount:0.2
+      },
+      ease:'power4.inOut',
+      duration: 1,
+      
+    });
     
   }
 }
