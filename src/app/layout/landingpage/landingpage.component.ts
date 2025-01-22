@@ -5,12 +5,14 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { CtaComponent } from '../../components/cta/cta.component';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PricingComponent } from '../../components/pricing/pricing.component';
+import { FaqComponent } from '../../components/faq/faq.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-landingpage',
-  imports: [HerosectionComponent, TestimonialsComponent, CtaComponent, FooterComponent],
+  imports: [HerosectionComponent, TestimonialsComponent, PricingComponent, FaqComponent, CtaComponent, FooterComponent],
   templateUrl: './landingpage.component.html',
 })
 export default class LandingpageComponent implements AfterViewInit {
@@ -62,7 +64,7 @@ export default class LandingpageComponent implements AfterViewInit {
       opacity: 0,
       scale:0,
       stagger:{
-        amount:0.2
+        amount:0.1
       },
       ease:'power4.inOut',
       duration: 1,
