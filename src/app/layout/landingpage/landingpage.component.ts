@@ -20,6 +20,23 @@ export default class LandingpageComponent implements AfterViewInit {
 
   public ngAfterViewInit(): void {
     
+    gsap.from('#pricingheadline1, #pricingheadline2, #pricingbox,  .onepricing', {
+      scrollTrigger: {
+        trigger: '#pricingsection',
+        start: 'top 50%', 
+        end: 'bottom 50%',    
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y:50,
+      stagger:{
+        amount:0.2
+      },
+      ease:'power4.inOut',
+      duration: 1,
+      
+    });
+
     gsap.from('#testiheadline1, #testiheadline2, #testibox,  .onetesti', {
       scrollTrigger: {
         trigger: '#testisection',
