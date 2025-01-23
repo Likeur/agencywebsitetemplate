@@ -9,6 +9,34 @@ body{
     font-family: "Manrope", serif;
 }
 
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: Pause animation on hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 8px;
