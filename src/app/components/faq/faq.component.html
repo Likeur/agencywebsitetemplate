@@ -1,1 +1,39 @@
-<p>faq works!</p>
+<section class="h-max mb-20">
+    <div class="lg:w-[85vw] mx-auto grid lg:grid-cols-3 gap-6 lg:gap-10">
+        <div>
+            <div>
+                <h4 class="flex flex-col text-2xl lg:text-6xl text-orange-950">
+                    <span class="faqheadline1">FAQs</span>
+                </h4>
+            </div>
+        </div>
+        <div class="w-full space-y-4 lg:col-span-2">
+            <div *ngFor="let item of faqItems; let i = index" 
+                 class="faq-item bg-white rounded-lg border p-4 shadow-sm overflow-hidden">
+                
+                <!-- Question -->
+                <button (click)="toggleFaq(i)"
+                        class="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50 transition-colors duration-200">
+                    <span class="font-medium text-2xl text-orange-950">{{item.question}}</span>
+                    <svg #faqIcon
+                         class="h-8 w-8 text-gray-500 transform transition-transform duration-300"
+                         xmlns="http://www.w3.org/2000/svg" 
+                         viewBox="0 0 20 20" 
+                         fill="currentColor">
+                        <path fill-rule="evenodd" 
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
+                              clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <!-- Answer -->
+                <div #faqAnswer
+                     class="overflow-hidden">
+                    <div class="p-4 bg-gray-50 text-gray-600">
+                        <p class="text-xl">{{item.answer}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
