@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import {Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +6,7 @@ import { Component, signal } from '@angular/core';
   templateUrl: './footer.component.html',
   styles: ``,
 })
-export class FooterComponent {
+export class FooterComponent{
   public linkStylefooter = signal('hover:text-orange-600 duration-300');
+   
 }

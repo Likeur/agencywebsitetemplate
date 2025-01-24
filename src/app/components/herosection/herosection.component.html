@@ -30,8 +30,10 @@
 
   <!-- Marquee -->
   <div class="">
-    <div class="marquee-container mt-20">
-      <div class="marquee-content">
+    <div class="marquee-container mt-20 relative rounded-full overflow-hidden">
+      <div class="absolute w-32 h-full bg-gradient-to-r from-orange-950/90 to-transparent blur-md z-50 left-0"></div>
+      <div class="absolute w-32 h-full bg-gradient-to-l from-orange-950/90 to-transparent blur-md z-50 right-0"></div>
+      <div class="marquee-content relative z-10">
         <!-- First set of logos -->
         <div class="flex space-x-8 items-center">
           <img src="assets/ibm-logo-white.png" alt="logo" class="h-12 w-auto">
