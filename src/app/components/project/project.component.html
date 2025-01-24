@@ -1,0 +1,33 @@
+<section class="h-max mb-20 ">
+    <div class="lg:w-[85vw] mx-auto p-5">
+        <div class="mb-8 lg:mb-12">
+            <h4>
+                <span id="projectheadline" class="text-2xl lg:text-6xl text-orange-950">Explorez nos récents projets</span>
+            </h4>
+        </div>
+        
+        <!-- Project box -->
+        <div class="flex flex-col gap-6 lg:gap-8">
+            @for (project of projectItems; track $index) {
+                <!-- One project -->
+            <div class="p-5 lg:p-10 lg:h-[50vh] h-max rounded-3xl bg-orange-50 grid lg:grid-cols-3 gap-5 lg:gap-10 ">
+                <div class=" rounded-2xl text-transparent bg-orange-400">
+                    .
+                </div>
+                <div class="flex flex-col justify-between lg:col-span-2">
+                    <div class="p-2 px-6 border w-max rounded-full">
+                        <p> {{project.title}} </p>
+                    </div>
+                    <p>
+                        {{project.description}}
+                    </p>
+
+                    <a [href]="project.projectlink" class="p-3 px-12 bg-orange-700 text-white hover:bg-orange-500 duration-300 border border-orange-600/20 flex items-center w-max rounded-full">
+                        <span>Voir le projet</span>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

@@ -9,6 +9,7 @@ import { PricingComponent } from '../../components/pricing/pricing.component';
 import { FaqComponent } from '../../components/faq/faq.component';
 import { WhyusComponent } from '../../components/whyus/whyus.component';
 import { ProcessComponent } from '../../components/process/process.component';
+import { ProjectComponent } from '../../components/project/project.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
   imports: [
     HerosectionComponent,
     WhyusComponent,
+    ProjectComponent,
     ProcessComponent,
     TestimonialsComponent,
     PricingComponent,
