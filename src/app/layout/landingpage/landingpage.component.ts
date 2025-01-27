@@ -157,7 +157,7 @@ export default class LandingpageComponent implements AfterViewInit {
       duration: 1,
     });
 
-    gsap.from('.oneproject', {
+    gsap.from('#projectheadline,.oneproject', {
       scrollTrigger: {
         trigger: '.oneproject',
         start: 'top 65%',
