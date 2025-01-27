@@ -157,6 +157,22 @@ export default class LandingpageComponent implements AfterViewInit {
       duration: 1,
     });
 
+    gsap.from('.oneproject', {
+      scrollTrigger: {
+        trigger: '.oneproject',
+        start: 'top 65%',
+        end: 'bottom 65%',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y: 50,
+      stagger: {
+        amount: 0.2,
+      },
+      ease: 'power4.inOut',
+      duration: 1,
+    });
+
     gsap.from('.ctacircle', {
       scrollTrigger: {
         trigger: '#ctasection',

@@ -10,7 +10,7 @@
         <div class="flex flex-col gap-6 lg:gap-8">
             @for (project of projectItems; track $index) {
                 <!-- One project -->
-            <div class="p-5 lg:p-10 lg:h-[50vh] h-max rounded-3xl bg-orange-50 grid lg:grid-cols-3 gap-5 lg:gap-10 ">
+            <div class="p-5 lg:p-10 lg:h-[50vh] oneproject h-max rounded-3xl bg-orange-50 grid lg:grid-cols-3 gap-5 lg:gap-10 ">
                 <div class=" rounded-2xl text-transparent bg-orange-400">
                     .
                 </div>
@@ -18,7 +18,7 @@
                     <div class="p-2 px-6 border w-max rounded-full">
                         <p> {{project.title}} </p>
                     </div>
-                    <p>
+                    <p class="text-lg">
                         {{project.description}}
                     </p>
 
