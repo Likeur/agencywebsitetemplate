@@ -17,7 +17,7 @@ export class HerosectionComponent implements AfterViewInit {
       opacity: 0.1,
       y: -170,
       bottom:2,
-      duration: 11,
+      duration: 6,
 
       repeat: -1, // Répète indéfiniment
       yoyo: true,
@@ -28,7 +28,7 @@ export class HerosectionComponent implements AfterViewInit {
       x: -800,
       y: -220,
       opacity: 0.1,
-      duration: 9,
+      duration: 7,
 
       repeat: -1, // Répète indéfiniment
       yoyo: true,

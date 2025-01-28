@@ -1,4 +1,4 @@
-<section class="lg:h-[100vh] lg:p-6 p-4 relative bg-gray-950 overflow-hidden text-white">
+<section id="herosection" class="lg:h-[100vh] lg:p-6 p-4 relative bg-gray-950 overflow-hidden text-white">
   <div class="absolute overlay1 left-1 top-1 z-0 bg-orange-600 size-[100rem] blur-3xl opacity-20 rounded-full"></div>
   <div class="absolute overlay2 right-1 top-1 z-0 bg-orange-600 size-[90rem] blur-3xl opacity-20 rounded-full"></div>
   <div class="absolute h-full w-full z-10 grid lg:left-20 lg:grid-cols-5 gap-2 justify-center">
@@ -9,11 +9,12 @@
     <div class="w-[10vw] border-r border-l border-gray-600/10"></div>
   </div>
 
-  <app-navbar />
+  <app-navbar/>
   <section
+    id="herobox"
     class="grid mt-5 relative z-40 lg:mt-16 lg:grid-cols-2 gap-5 h-max lg:h-[60vh] items-center lg:gap-32 lg:w-[85vw] mx-auto"
   >
-    <div>
+    <div id="herotextbox">
       <h1 class="text-3xl lg:text-5xl">
         On transforme vos idées en Sites web modernes, intuitives et
         inspirantes.
@@ -25,7 +26,7 @@
           </a>
       </div>
     </div>
-    <div class="h-full w-full  rounded-2xl grid grid-cols-2 gap-4">
+    <div id="heroimagebox" class="h-full w-full  rounded-2xl grid grid-cols-2 gap-4">
       <div class="rounded-2xl h-[30vh] overflow-hidden ring-4 ring-white/10">
         <img src="/assets/website1.webp " class="h-full w-full object-cover" alt="">
       </div>
@@ -40,7 +41,7 @@
   </section>
 
   <!-- Marquee -->
-  <div class="">
+  <div id="logomarquee" class="">
     <div class="marquee-container mt-20 relative rounded-full overflow-hidden">
       <div class="absolute w-32 h-full bg-gradient-to-r from-orange-950/90 to-transparent blur-md z-50 left-0"></div>
       <div class="absolute w-32 h-full bg-gradient-to-l from-orange-950/90 to-transparent blur-md z-50 right-0"></div>

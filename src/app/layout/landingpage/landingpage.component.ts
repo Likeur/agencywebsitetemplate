@@ -29,7 +29,65 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './landingpage.component.html',
 })
 export default class LandingpageComponent implements AfterViewInit {
+  public introtl = gsap.timeline();
+
   public ngAfterViewInit(): void {
+    this.introtl
+      .from('.oneletter', {
+        opacity: 0,
+        x: 70,
+        duration: 2,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: 'power4.inOut',
+      })
+      .to('.oneletter', {
+        opacity: 0,
+        x: -70,
+        duration: 2,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: 'power4.inOut',
+      })
+      .to('#entrancecover', {
+        scaleY: 0,
+        duration: 2,
+        ease: 'power4.inOut',
+      })
+      .from(
+        '#herosection',
+        {
+          opacity: 0,
+          duration: 2,
+          ease: 'power4.inOut',
+        },
+        '-=0.9'
+      )
+      .from(
+        '#navtool',
+        {
+          y: -100,
+          duration: 1.5,
+          ease: 'power4.inOut',
+        },
+        '-=1.5'
+      )
+      .from(
+        '#herotextbox, #heroimagebox, #logomarquee',
+        {
+          y: 50,
+          duration: 1.5,
+          opacity: 0,
+          stagger: {
+            amount: 0.2,
+          },
+          ease: 'power4.inOut',
+        },
+        '-=1.5'
+      );
+
     gsap.from(
       '#pricingheadline1, #pricingheadline2, #pricingbox,  .onepricing',
       {
@@ -118,7 +176,6 @@ export default class LandingpageComponent implements AfterViewInit {
         start: 'top 65%',
         end: 'bottom 65%',
         toggleActions: 'play none none reverse',
-        
       },
       opacity: 0.2,
       y: 50,
@@ -134,9 +191,9 @@ export default class LandingpageComponent implements AfterViewInit {
         trigger: '#processsection',
         start: 'top 75%',
         end: 'bottom 20%',
-        scrub: true,     
+        scrub: true,
       },
-      height: "0vh",
+      height: '0vh',
       ease: 'power4.inOut',
       duration: 1,
     });
