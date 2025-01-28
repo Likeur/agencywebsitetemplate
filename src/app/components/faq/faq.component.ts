@@ -1,6 +1,9 @@
 import { NgFor } from '@angular/common';
 import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-faq',
@@ -50,6 +53,12 @@ export class FaqComponent implements AfterViewInit {
 
     // Entrance animation for the FAQ items
     gsap.from('.faq-item', {
+      scrollTrigger: {
+        trigger: '#faqsection',
+        start: 'top 65%',
+        end: 'bottom 65%',
+        toggleActions: 'play none none reverse',
+      },
       y: 30,
       opacity: 0,
       duration: 0.8,
