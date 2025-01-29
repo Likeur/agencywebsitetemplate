@@ -63,7 +63,7 @@ export default class LandingpageComponent implements AfterViewInit {
           duration: 2,
           ease: 'power4.inOut',
         },
-        '-=0.9'
+        '-=1.7'
       )
       .from(
         '#navtool',
