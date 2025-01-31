@@ -3,7 +3,7 @@
         <span>NOVA</span>
     </a>
 
-    <ul [ngClass]="{'w-0':navIsOpen==false, 'w-screen': navIsOpen}" class="w-screen text-5xl lg:text-lg lg:w-max h-screen lg:h-max z-40 bg-orange-950 lg:bg-transparent inset-0 justify-center fixed lg:relative flex flex-col lg:flex-row items-center gap-4 duration-300 lg:gap-10 overflow-hidden">
+    <ul class="items-center gap-4 lg:gap-10 overflow-hidden hidden lg:flex">
         <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Service</a></li>
         <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Pricing</a></li>
         <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Process</a></li>
