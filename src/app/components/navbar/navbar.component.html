@@ -1,17 +1,22 @@
-<nav id="navtool" class="flex relative z-40 items-center  justify-between lg:w-[85vw] mx-auto">
+<nav id="navtool" class="flex relative z-50 items-center  justify-between lg:w-[85vw] mx-auto">
     <a href="" class="p-2 size-14 rounded-lg grid place-content-center text-2xl font-semibold">
         <span>NOVA</span>
     </a>
 
-    <ul class="flex items-center gap-4 lg:gap-10">
-        <li><a href=""  [class]="linkStyle()">Service</a></li>
-        <li><a href=""  [class]="linkStyle()">Pricing</a></li>
-        <li><a href=""  [class]="linkStyle()">Process</a></li>
-        <li><a href=""  [class]="linkStyle()">FAQs</a></li>
+    <ul [ngClass]="{'w-0':navIsOpen==false, 'w-screen': navIsOpen}" class="w-screen text-5xl lg:text-lg lg:w-max h-screen lg:h-max z-40 bg-orange-950 lg:bg-transparent inset-0 justify-center fixed lg:relative flex flex-col lg:flex-row items-center gap-4 duration-300 lg:gap-10 overflow-hidden">
+        <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Service</a></li>
+        <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Pricing</a></li>
+        <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">Process</a></li>
+        <li><a (click)="toggleNav()" href=""  [class]="linkStyle()">FAQs</a></li>
        
+        <button (click)="toggleNav()" class="absolute text-xl hover:cursor-pointer top-5 right-5 hover:text-orange-300">close</button>
     </ul>
 
-    <a href="" class="p-3 hover:bg-orange-100 duration-300 hover:text-orange-600 px-12 rounded-full bg-orange-500">
+    <a href="" class="p-3 hidden lg:block hover:bg-orange-100 duration-300 hover:text-orange-600 px-12 rounded-full bg-orange-500">
         <span>Reserver un appel</span>
     </a>
+
+    <button (click)="toggleNav()" class="hover:text-orange-600 duration-200 hover:cursor-pointer lg:hidden">
+        <div class="">Menu</div>
+    </button>
 </nav>
