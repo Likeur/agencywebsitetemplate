@@ -1,8 +1,8 @@
-<section class="h-max mb-20 ">
+<section class="h-max mb-20 mt-10 ">
     <div class="lg:w-[85vw] mx-auto p-5">
         <div class="mb-8 lg:mb-12">
-            <h4 class="h-max overflow-hidden pb-1">
-                <span id="projectheadline" class="text-2xl lg:text-6xl text-orange-950">Explorez nos récents projets</span>
+            <h4 class="h-max overflow-hidden pb-1 text-balance text-center">
+                <span id="projectheadline" class="text-3xl  lg:text-6xl text-orange-950">Explorez nos récents projets</span>
             </h4>
         </div>
         
@@ -14,15 +14,15 @@
                 <div class=" rounded-2xl shadow-sm overflow-hidden">
                     <img [src]="project.image" class="h-full w-full object-cover" alt="">
                 </div>
-                <div class="flex flex-col justify-between lg:col-span-2">
+                <div class="flex flex-col justify-between lg:col-span-2 mt-4 lg:mt-0">
                     <div class="p-2 px-6 border w-max rounded-full">
                         <p> {{project.title}} </p>
                     </div>
-                    <p class="text-lg">
+                    <p class="text-lg mt-4 lg:mt-0">
                         {{project.description}}
                     </p>
 
-                    <a [href]="project.projectlink" class="p-3 px-12 bg-orange-700 text-white hover:bg-orange-500 duration-300 border border-orange-600/20 flex items-center w-max rounded-full">
+                    <a [href]="project.projectlink" class="p-3 mt-5 lg:mt-0 px-12 bg-orange-700 text-white w-full lg:w-max hover:bg-orange-500 duration-300 border border-orange-600/20 flex items-center rounded-full justify-center">
                         <span>Voir le projet</span>
                     </a>
                 </div>
